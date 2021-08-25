@@ -1,4 +1,94 @@
-body 
-{
-    background-color: red;
-}
+*, *::after, *::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: inherit; }
+
+html {
+  font-size: 50%;
+  background-color: #001830; }
+
+body {
+  box-sizing: border-box; }
+
+header {
+  background-color: #001830; }
+  header .title .project-title {
+    font-size: 4rem;
+    padding-top: 3.5rem;
+    font-family: 'Rampart One', cursive;
+    color: wheat;
+    letter-spacing: 2px;
+    font-size: 8rem; }
+  header .title .date-time {
+    padding: 1rem;
+    font-size: 2rem;
+    color: wheat;
+    text-align: center;
+    font-family: 'Prompt', sans-serif; }
+
+main {
+  background-color: #251e3e;
+  height: 60vh;
+  position: relative; }
+  main .main-outer {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute; }
+    main .main-outer .search-here {
+      float: left; }
+      main .main-outer .search-here .input-here #search_field {
+        font-size: 4rem;
+        padding: 1rem;
+        letter-spacing: 2px;
+        margin: 3rem;
+        background-color: #3b364a;
+        color: wheat;
+        font-weight: bold;
+        border: solid 2px #3b364a;
+        border-radius: 2rem; }
+    main .main-outer .click-here {
+      margin-top: 3rem;
+      float: left; }
+      main .main-outer .click-here #search_button {
+        font-size: 4rem;
+        background-color: #3b364a;
+        padding: 1rem;
+        letter-spacing: 2px;
+        color: white;
+        font-weight: bold;
+        border: solid 2px #3b364a;
+        border-radius: 2rem; }
+        main .main-outer .click-here #search_button:hover {
+          cursor: pointer; }
+
+footer {
+  font-size: 2.5rem;
+  position: relative; }
+  footer .footer-outer {
+    background-color: #001830; }
+    footer .footer-outer .version {
+      color: wheat;
+      text-align: center;
+      padding-top: 2rem;
+      font-family: 'Prompt', sans-serif; }
+    footer .footer-outer .author-name {
+      color: wheat;
+      text-align: center;
+      padding-top: 2rem;
+      font-family: 'Prompt', sans-serif;
+      font-weight: bolder;
+      letter-spacing: 2px; }
+    footer .footer-outer .row-of-links {
+      left: 50%;
+      padding-top: 4rem;
+      transform: translateX(-50%);
+      position: absolute;
+      color: wheat;
+      max-width: 114rem; }
+      footer .footer-outer .row-of-links .col-individual {
+        width: calc(( 100% - 3 * 2rem ) / 4);
+        float: left;
+        padding-left: 3rem;
+        padding-right: 3rem; }
+        footer .footer-outer .row-of-links .col-individual:not(:last-child) {
+          margin-right: 2rem; }
