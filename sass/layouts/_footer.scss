@@ -1,0 +1,49 @@
+
+footer
+{
+    
+    font-size: 2.5rem;
+    position: relative;
+    .footer-outer
+    {
+        background-color: $color-header-footer;
+       
+        .version
+        {
+            color:wheat;
+            text-align: center;
+            padding-top : 2rem;
+            font-family: 'Prompt', sans-serif;
+        }
+        .author-name
+        {
+            color:wheat;
+            text-align: center;
+            padding-top : 2rem;
+            font-family: 'Prompt', sans-serif;
+            font-weight: bolder;
+            letter-spacing: 2px;
+        }
+        .row-of-links
+        {
+            
+            left : 50%;
+            padding-top : 4rem;
+            transform: translateX(-50%);
+           position: absolute;
+            color:wheat;
+            max-width: 114rem;
+            .col-individual
+            {
+                width : calc(( 100% - 3 * #{$footer-margin-right} ) / 4 );
+                float:left;
+                padding-left:3rem;
+                padding-right: 3rem;
+                &:not(:last-child)
+                {
+                    margin-right : $footer-margin-right;
+                }
+            }
+        }
+    }
+}

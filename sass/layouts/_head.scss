@@ -1,0 +1,29 @@
+header{
+    background-color: $color-header-footer;
+        
+        
+    .title
+    {
+        
+        .project-title
+        {
+            font-size:4rem;
+            padding-top : 3.5rem;
+            font-family: 'Rampart One', cursive;
+            color:wheat;
+
+            letter-spacing: 2px;
+            font-size: 8rem;
+        }
+        .date-time
+        {
+           padding : 1rem;
+            font-size : 2rem;
+
+            color:wheat;
+            text-align: center;
+
+            font-family: 'Prompt', sans-serif;
+        }
+    }
+}
