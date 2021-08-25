@@ -1,0 +1,22 @@
+{
+  "name": "weatherify",
+  "version": "1.0.0",
+  "description": "Know your Weather",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manu-karenite/weatherify.git"
+  },
+  "author": "Manavesh Narendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manu-karenite/weatherify/issues"
+  },
+  "homepage": "https://github.com/manu-karenite/weatherify#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
