@@ -2,24 +2,54 @@
 <html>
     <head>
         <title>Weatherify | Know your Weather</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Prompt:wght@300&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
-            <h2 class="project-title">WEATHERIFY</h2>
+            <div class="title">
+               <center> <div class="project-title">...WEATHERIFY...</div>
+                <div class="date-time">date-time</div>
+                </center>
+                
+               
+            </div>
+            
         </header>
         <main>
-            Main Content here
+            <div class="main-outer">
+                <div class="search-here">
+                    <div class="input-here">
+                        <input type="text" minlength="2" placeholder="Type City Here.." id="search_field" mandatory>
+                       
+                    </div>
+                 </div>
+                 <div class="click-here">
+                    <input type="submit" value="Search" id="search_button">
+                 </div>
+                
+
+            </div>
+            
         </main>
         <footer>
+            <div class="footer-outer">
+
             <div class="version">v1.0 August, 2021</div>
             <div class="author-name">Manavesh Narendra</div>
             <div class="row-of-links">
-                <div class="col-individual">Telegram</div>
-                <div class="col-individual">Linked In</div>
-                <div class="col-individual">Github</div>
-                <div class="col-individual">Mail</div>
+                <div class="col-individual"><img src="img/git.svg"></div>
+                <div class="col-individual"><img src="img/linked.svg"></div>
+                <div class="col-individual"><img src="img/telegram.svg"></div>
+                <div class="col-individual"><img src="img/mail.svg"></div>
             </div>
+
+            </div>
+            
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>
