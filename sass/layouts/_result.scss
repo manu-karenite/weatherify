@@ -11,7 +11,7 @@
         border-radius: 2rem;
         font-family: 'Prompt', sans-serif;
         text-align: center;
-        letter-spacing: 2px;
+        
         animation-name: fade;
         animation-duration: 2s;
         min-width : 80rem;
@@ -21,6 +21,7 @@
             
             font-weight :600;
             font-size: 8rem;
+            letter-spacing: 10px;
         }
 
         .country__region
