@@ -4,6 +4,7 @@ footer
     
     font-size: 2.5rem;
     position: relative;
+
     .footer-outer
     {
         background-color: $color-header-footer;
@@ -12,14 +13,14 @@ footer
         {
             color:wheat;
             text-align: center;
-            padding-top : 2rem;
+            padding-top : 1rem;
             font-family: 'Prompt', sans-serif;
         }
         .author-name
         {
             color:wheat;
             text-align: center;
-            padding-top : 2rem;
+            padding-top : 1rem;
             font-family: 'Prompt', sans-serif;
             font-weight: bolder;
             letter-spacing: 2px;
@@ -28,7 +29,7 @@ footer
         {
             
             left : 50%;
-            padding-top : 4rem;
+            padding-top : 3rem;
             transform: translateX(-50%);
            position: absolute;
             color:wheat;
