@@ -19,7 +19,13 @@ main{
                     font-weight: bold;
                     border : solid 2px #3b364a;
                     border-radius : 2rem;
+                    font-family: 'Prompt', sans-serif;
+                    &::placeholder
+                    {
+                        font-family: 'Prompt', sans-serif;
+                    }
                }
+
            }
        }
         .click-here {
@@ -35,6 +41,7 @@ main{
                 font-weight: bold;
                 border : solid 2px #3b364a;
                 border-radius : 2rem;
+                font-family: 'Prompt', sans-serif;
                 &:hover {
                     cursor : pointer;
                }

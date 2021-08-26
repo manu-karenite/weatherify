@@ -45,7 +45,10 @@ main {
         color: wheat;
         font-weight: bold;
         border: solid 2px #3b364a;
-        border-radius: 2rem; }
+        border-radius: 2rem;
+        font-family: 'Prompt', sans-serif; }
+        main .main-outer .search-here .input-here #search_field::placeholder {
+          font-family: 'Prompt', sans-serif; }
     main .main-outer .click-here {
       margin-top: 3rem;
       float: left; }
@@ -57,7 +60,8 @@ main {
         color: white;
         font-weight: bold;
         border: solid 2px #3b364a;
-        border-radius: 2rem; }
+        border-radius: 2rem;
+        font-family: 'Prompt', sans-serif; }
         main .main-outer .click-here #search_button:hover {
           cursor: pointer; }
 
