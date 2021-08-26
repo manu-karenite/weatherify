@@ -104,6 +104,10 @@ footer {
         padding-right: 3rem; }
         footer .footer-outer .row-of-links .col-individual:not(:last-child) {
           margin-right: 2rem; }
+        footer .footer-outer .row-of-links .col-individual .format-footer {
+          transition: all 0.33s; }
+          footer .footer-outer .row-of-links .col-individual .format-footer:hover {
+            transform: scale(1.3, 1.3); }
 
 .main .result-outer {
   margin-top: 5rem;
