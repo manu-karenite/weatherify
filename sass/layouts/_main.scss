@@ -1,6 +1,6 @@
-main{
+.main{
     background-color: #251e3e;
-    height:60vh;
+    height:65vh;
     position: relative;
     .main-outer {
         left:50%;
@@ -10,7 +10,7 @@ main{
             float: left;
             .input-here {
                 #search_field {
-                    font-size: 4rem;
+                    font-size: 3rem;
                     padding : 1rem;
                     letter-spacing: 2px;
                     margin : 3rem;
@@ -32,7 +32,7 @@ main{
             margin-top: 3rem;
             float: left;
             #search_button {
-                font-size: 4rem;
+                font-size: 3rem;
                 background-color: #3b364a;
                 padding : 1rem;
                 letter-spacing: 2px;
@@ -47,5 +47,15 @@ main{
                }
            }
        }
+    
+   }
+   .result-outer
+   {
+       color:wheat;
+       font-size:2rem;
+       position: absolute;
+       left : 50%;
+       top : 50%;
+       transform: translate(-50%,-50%);
    }
 }
