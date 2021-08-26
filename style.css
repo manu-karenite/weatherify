@@ -1,3 +1,4 @@
+/*for result section */
 *, *::after, *::before {
   margin: 0rem;
   padding: 0rem;
@@ -26,18 +27,18 @@ header {
     text-align: center;
     font-family: 'Prompt', sans-serif; }
 
-main {
+.main {
   background-color: #251e3e;
-  height: 60vh;
+  height: 65vh;
   position: relative; }
-  main .main-outer {
+  .main .main-outer {
     left: 50%;
     transform: translateX(-50%);
     position: absolute; }
-    main .main-outer .search-here {
+    .main .main-outer .search-here {
       float: left; }
-      main .main-outer .search-here .input-here #search_field {
-        font-size: 4rem;
+      .main .main-outer .search-here .input-here #search_field {
+        font-size: 3rem;
         padding: 1rem;
         letter-spacing: 2px;
         margin: 3rem;
@@ -47,13 +48,13 @@ main {
         border: solid 2px #3b364a;
         border-radius: 2rem;
         font-family: 'Prompt', sans-serif; }
-        main .main-outer .search-here .input-here #search_field::placeholder {
+        .main .main-outer .search-here .input-here #search_field::placeholder {
           font-family: 'Prompt', sans-serif; }
-    main .main-outer .click-here {
+    .main .main-outer .click-here {
       margin-top: 3rem;
       float: left; }
-      main .main-outer .click-here #search_button {
-        font-size: 4rem;
+      .main .main-outer .click-here #search_button {
+        font-size: 3rem;
         background-color: #3b364a;
         padding: 1rem;
         letter-spacing: 2px;
@@ -62,8 +63,15 @@ main {
         border: solid 2px #3b364a;
         border-radius: 2rem;
         font-family: 'Prompt', sans-serif; }
-        main .main-outer .click-here #search_button:hover {
+        .main .main-outer .click-here #search_button:hover {
           cursor: pointer; }
+  .main .result-outer {
+    color: wheat;
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 footer {
   font-size: 2.5rem;
@@ -73,18 +81,18 @@ footer {
     footer .footer-outer .version {
       color: wheat;
       text-align: center;
-      padding-top: 2rem;
+      padding-top: 1rem;
       font-family: 'Prompt', sans-serif; }
     footer .footer-outer .author-name {
       color: wheat;
       text-align: center;
-      padding-top: 2rem;
+      padding-top: 1rem;
       font-family: 'Prompt', sans-serif;
       font-weight: bolder;
       letter-spacing: 2px; }
     footer .footer-outer .row-of-links {
       left: 50%;
-      padding-top: 4rem;
+      padding-top: 3rem;
       transform: translateX(-50%);
       position: absolute;
       color: wheat;
@@ -96,3 +104,38 @@ footer {
         padding-right: 3rem; }
         footer .footer-outer .row-of-links .col-individual:not(:last-child) {
           margin-right: 2rem; }
+
+.main .result-outer {
+  margin-top: 5rem;
+  font-size: 3rem;
+  background-color: #001830;
+  max-width: 114rem;
+  border: solid 2px wheat;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-family: 'Prompt', sans-serif;
+  text-align: center;
+  letter-spacing: 2px;
+  animation-name: fade;
+  animation-duration: 2s;
+  min-width: 80rem; }
+  .main .result-outer .town {
+    font-weight: 600;
+    font-size: 8rem; }
+  .main .result-outer .country__region {
+    width: 100%; }
+    .main .result-outer .country__region .col-1-of-2 {
+      width: 50%;
+      float: left; }
+  .main .result-outer .condition {
+    clear: both;
+    content: "";
+    font-weight: bolder; }
+  .main .result-outer .country-img .country-flag {
+    width: 30rem; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
