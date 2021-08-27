@@ -1,52 +1,55 @@
 .main
 {   
-     .result-outer
-    {
-        margin-top : 5rem;
-        font-size:3rem;
-        background-color: $color-header-footer;
-        max-width :114rem;
-        border : solid 2px wheat;
-        padding : 1rem 3rem;
-        border-radius: 2rem;
-        font-family: 'Prompt', sans-serif;
-        text-align: center;
-        
-        animation-name: fade;
-        animation-duration: 2s;
-        min-width : 80rem;
-        
-        .town
+     .container
+     {
+        .result-outer
         {
+            margin-top : 5rem;
+            font-size:3rem;
+            background-color: $color-header-footer;
+            max-width :114rem;
+            border : solid 2px wheat;
+            padding : 3rem 3rem;
+            border-radius: 2rem;
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
             
-            font-weight :600;
-            font-size: 8rem;
-            letter-spacing: 10px;
-        }
-
-        .country__region
-        {
-                width :100%;
-                @include col1of2;
-                
-        }
-        .condition
-        {
-            clear: both;
-            content: "";
-            font-weight: bolder;
-
-        }
-        
-        .country-img
-        {
+            animation-name: fade;
+            animation-duration: 2s;
+            min-width : 80rem;
             
-            .country-flag
+            .town
             {
-               width :30rem;
-               
-
+                
+                font-weight :600;
+                font-size: 8rem;
+                letter-spacing: 10px;
+            }
+    
+            .country__region
+            {
+                    width :100%;
+                    @include col1of2;
+                    
+            }
+            .condition
+            {
+                clear: both;
+                content: "";
+                font-weight: bolder;
+    
+            }
+            
+            .country-img
+            {
+                
+                .country-flag
+                {
+                   width :30rem;
+                   
+    
+                }
             }
         }
-    }
+     }
 }
