@@ -11,6 +11,7 @@ const inputCity = document.querySelector('#search_field');
 const submitCity = document.querySelector('#search_button');
 
 const container = document.querySelector('.container')
+document.querySelector('.container').style.height="90vh";
 /*-----------------------------------------------*/
 const locale = navigator.language;
 const date = new Date();
@@ -32,7 +33,7 @@ setDateTime.textContent = data;
 let cityName = undefined;
 submitCity.addEventListener('click', function(e) {
     e.preventDefault();
-
+    document.querySelector('.container').style.height="auto";
     cityName = inputCity.value.toLowerCase();
     const toArray = cityName.split(' ');
     const lowerArray = toArray.map(function(name) {

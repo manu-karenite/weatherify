@@ -1,11 +1,12 @@
 .main{
     background-color: #251e3e;
     position: relative;
-    height:90vh;
+    
     .main-outer {
-        left:50%;
-        transform: translateX(-50%);
         position: absolute;
+        left:50%;
+        transform: translate(-50%);
+       
         .search-here {
             float: left;
             .input-here {
@@ -53,9 +54,9 @@
    {
        color:wheat;
        font-size:2rem;
-       position: absolute;
-       left : 50%;
-       top : 50%;
-       transform: translate(-50%,-50%);
+    
+       
+        margin-top: 20rem;
+
    }
 }

@@ -1,9 +1,12 @@
 .main
 {   
      .container
-     {
+     {  
+        padding-top: 15rem;
+        padding-bottom :12rem;
         .result-outer
         {
+            
             margin-top : 5rem;
             font-size:3rem;
             background-color: $color-header-footer;
@@ -17,6 +20,7 @@
             animation-name: fade;
             animation-duration: 2s;
             min-width : 80rem;
+            margin :0 auto;
             
             .town
             {
