@@ -11,7 +11,7 @@ const inputCity = document.querySelector('#search_field');
 const submitCity = document.querySelector('#search_button');
 
 const container = document.querySelector('.container')
-document.querySelector('.container').style.height="90vh";
+document.querySelector('.container').style.height="70vh";
 /*-----------------------------------------------*/
 const locale = navigator.language;
 const date = new Date();
