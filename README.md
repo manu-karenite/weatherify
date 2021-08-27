@@ -1,10 +1,9 @@
 # 🔆 Weatherify | Know your Weather
 ### This Web Application is built to render the real-time location across the globe 🌎 based on the 
-* City Name
-* Partial City Names
-* Region Names
-* Country Name (renders Capital City)
-* Airport Code **(IATA Code)**
+* City Name **(Example: Mumbai)**
+* Partial City Names **(Example : Lond)**
+* Country Name (renders a City) **(Example: France)**
+* Airport Code _(IATA Code)_ **(Example: PAT)** 
 
 ### Built on the traditional _XML-HTTP Request_ from the API of source : https://restcountries.com/
 
