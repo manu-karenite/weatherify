@@ -45,7 +45,7 @@ submitCity.addEventListener('click', function(e) {
 
     //TRY TO BUILD API REQUEST
     const request = new XMLHttpRequest();
-    request.open('GET', `http://api.weatherstack.com/current?access_key=47f29685b0737d7262f401cb843e9714&query=${finalCityName}`);
+    request.open('GET', `https://api.openweathermap.org/data/2.5/weather?q=${finalCityName}&appid=9e5270f632b2cb2f6fc5eab6a9b3fcdb`);
     
     request.send();
 
@@ -60,7 +60,7 @@ submitCity.addEventListener('click', function(e) {
 
             //callback hell
             const request1 = new XMLHttpRequest();
-            request1.open('GET', `https://restcountries.eu/rest/v2/name/${dataFirst.location.country}?fullText=true`);
+            request1.open('GET', `https://restcountries.com/v3/alpha/${dataFirst.sys.country}`);
 
             request1.send();
 
@@ -77,40 +77,34 @@ submitCity.addEventListener('click', function(e) {
 
 function displayResult(dataFirst, dataSecond) {
     //succesful inputs are obtained
-    const name = dataFirst.location.name.toUpperCase();
-    const country = dataFirst.location.country;
-    let region = dataFirst.location.region;
-    if (region == "")
-        region = dataFirst.location.name;
-    const condition = dataFirst.current.condition.text;
-    const temp = dataFirst.current.temp_c
-    const feelslike_c = dataFirst.current.feelslike_c;
-    const precipitation = dataFirst.current.precip_mm;
-    const humidity = dataFirst.current.humidity;
-    const [wind_dir, wind_speed] = [dataFirst.current.wind_dir, dataFirst.current.wind_kph];
-    const [visib, uv] = [dataFirst.current.vis_km, Number(dataFirst.current.uv)];
-    let day = dataFirst.current.is_day;
-    if (day == 0)
-        day = "Night 🌃";
-    else
-        day = "Day 🌄";
-    let uvIndex = undefined;
-    if (uv < 1)
-        uvIndex = "Very Low";
-    else if (uv >= 1 && uv <= 2)
-        uvIndex = "Low";
-    else if (uv > 2 && uv <= 3)
-        uvIndex = "Average";
-    else if (uv > 3 && uv <= 5)
-        uvIndex = "Moderate";
-    else if (uv > 5 && uv <= 7)
-        uvIndex = "High";
-    else if (uv > 7 && uv <= 10)
-        uvIndex = "High";
-    else
-        uvIndex = "Extreme";
+    const name = dataFirst.name.toUpperCase();
+    const country = dataSecond[0].name.official;
+    let region = dataSecond[0].region;
+    const condition = dataFirst.weather[0].main;
+    const temp = (dataFirst.main.temp*1 - 273).toFixed(2);
+    const feelslike_c = (dataFirst.main.feels_like*1 - 273).toFixed(2);
+    const precipitation = /*dataFirst.current.precip_mm;*/ 5;
+    const humidity = dataFirst.main.humidity;
+    const [wind_deg, wind_speed] = [dataFirst.wind.deg, dataFirst.wind.speed];
+    const [visib, clouds] = [(((dataFirst.visibility)*1)/1000), Number(dataFirst.clouds.all)];
+    const max=(dataFirst.main.temp_max*1 - 273).toFixed(2);
+    const min=(dataFirst.main.temp_min*1 - 273).toFixed(2);
+
+    const option = 
+    {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        weekday: 'short',
+        hour :"numeric",
+        minute:"numeric",
+      
+    }  
 
 
+    const sunrise = new Date((dataFirst.sys.sunrise*1)*1000).toLocaleDateString(navigator.language,option);
+    const sunset = new Date((dataFirst.sys.sunset*1)*1000).toLocaleDateString(navigator.language,option);
+    const localtime = new Date((dataFirst.dt*1)*1000).toLocaleDateString(navigator.language,option);
     const htmltoPut =
         `<div class="result-outer">
                 <div class="town">${name}</div>
@@ -121,12 +115,14 @@ function displayResult(dataFirst, dataSecond) {
                 <div class="condition">${condition}</div>
                 <div class="temp">Temperature: ${temp} °C</div>
                 <div class="feels-like">Feels Like: ${feelslike_c} °C</div>
-                <div class="precipitation">🌧️:&emsp;${precipitation} mm</div>
+                <div class="min-max">Minimum: ${min} °C &emsp;  Maximum: ${max} °C </div>
                 <div class="humidity">Humidity:&emsp;${humidity}%</div>
-                <div class="wind">🌬️:&emsp;${wind_dir}  ${wind_speed} kph</div>
+                <div class="wind">🌬️:&emsp;${wind_deg}&deg;  ${wind_speed} mps</div>
                 <div class="visib">Visibility:&emsp;${visib}km</div>
-                <div class="uv">UV: ${uvIndex}</div>
-                <div class="livesIn">City in ${day}</div>
+                <div class="uv">Clouds: ${clouds}%</div>
+                <div class="sunrise">Sunrise 🌅: ${sunrise}</div>
+                <div class="sunset">Sunset 🌇: ${sunset}</div>
+                
              </div>`;
     container.innerHTML = "";
     container.insertAdjacentHTML("beforeend", htmltoPut);
@@ -134,5 +130,4 @@ function displayResult(dataFirst, dataSecond) {
         inputCity.value = "";
     }, 1000);
 
-    //second JSON will be used in upcomig version
 }
