@@ -45,7 +45,8 @@ submitCity.addEventListener('click', function(e) {
 
     //TRY TO BUILD API REQUEST
     const request = new XMLHttpRequest();
-    request.open('GET', `https://api.weatherapi.com/v1/current.json?key=73027853214e4bc18f0151641212408&q=${finalCityName}&aqi=yes`);
+    request.open('GET', `http://api.weatherstack.com/current?access_key=47f29685b0737d7262f401cb843e9714&query=${finalCityName}`);
+    
     request.send();
 
     request.addEventListener('load', function() {
